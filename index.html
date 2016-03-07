@@ -1,25 +1,42 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>jQuery Template</title>
+
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery Template</title>
   <link rel="stylesheet" href="stylesheet.css" type="text/css">
-    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
-    <script>
-$(function(){
-    //jQuery goes here
+  <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script>
+    $(function() {
+      
+      $("button").click(function(){
+      var favColor = $('#favColor').val();
+      $('input').css('background-color', favColor);
+      $('#banner').val(favColor);
+      
+      });
+
+    });
+  </script>
+  <style>
+    h1 {
+      text-align: center;
+    }
     
-});
-    </script>
-    <style>
-      #banner{
-        display: none;
-      }
-    </style>
-  </head>
-  <body>
-<div id="banner">
-  
-</div>
-  </body>
+   /* #banner {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Which kpop band is meant for you?</h1>
+  <div id="banner">
+    What's your favorite color?
+ <input id="favColor">
+  <button>enter</button>
+ 
+  </div>
+</body>
+
 </html>
