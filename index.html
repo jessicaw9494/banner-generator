@@ -11,9 +11,8 @@
       
       $("button").click(function(){
       var favColor = $('#favColor').val();
-      $('input').css('background-color', favColor);
+      $('body').css('background-color', favColor);
       $('#banner').val(favColor);
-      
       });
 
     });
@@ -22,8 +21,7 @@
     h1 {
       text-align: center;
     }
-    
-   /* #banner {
+    /*#banner {
       display: none;
     }
   </style>
@@ -35,6 +33,7 @@
     What's your favorite color?
  <input id="favColor">
   <button>enter</button>
+  
  
   </div>
 </body>
