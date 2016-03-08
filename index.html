@@ -6,66 +6,66 @@
   <title>jQuery Template</title>
   <link rel="stylesheet" href="stylesheet.css" type="text/css">
   <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
- 
+
   <script>
     $(function() {
-$('button').click(function(){
-  var name = $('#name').val();
-  var name = $('input').val();
-        $('h1').html( name + "'s " + "KPOP BANNER" );
-});
+      $('button').click(function() {
+        var name = $('#name').val();
+        var name = $('input').val();
+        $('h1').html(name + "'s " + "KPOP BANNER");
+      });
 
       $("button").click(function() {
         var favColor = $('#favColor').val();
         $('body').css('background-color', favColor);
         $('#banner').val(favColor);
       });
-
-      $("select").click(function() {
-        var favColor = $('#favColor').val();
-        $('body').css('background', favColor);
-        $('#banner').val(favColor);
-      });
     });
   </script>
-  
+
   <style>
     h1 {
       text-align: center;
+      font-family: Impact;
+    }
+    
+    p {
+      font-family: Impact;
     }
     /*#banner {
       display: none;
     }
   </style>
-  
+
 </head>
 
 <body>
   <h1>KPOP BANNER</h1>
-  
+
   <div id="name">
     <p>What's your name?</p>
-  <input id='name'>
-  <button>enter</button>
+    <input id='name'>
+    <button>enter</button>
   </div>
 
-<br>
+  <br>
 
   <div id="banner">
     <p>What's your favorite color?</p>
     <input id="favColor">
     <button>enter</button>
   </div>
-  
+
   <br>
-  
+
   <div id="image">
-      <p>What is your favorite music genre?</p>
-    <select>
-      <option value="pop">Pop</option>
-      <option value="hip hop">Hip Hop</option>
+    <p>What's your favorite music genre?</p>
+    <select id="themes" onChange="changeTheme()">
+      <option value="images/bg/default.png">Default</option>
+      <option value="images/bg/ikon.jpg">Hip Hop</option>
     </select>
   </div>
+
 </body>
 
 </html>
