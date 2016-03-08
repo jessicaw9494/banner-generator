@@ -20,6 +20,13 @@
         $('body').css('background-color', favColor);
         $('#banner').val(favColor);
       });
+      
+$("select").click(function() {
+        var change = $('#backgrounds').val();
+       $("#image").css("background","url(images/image.jpg)");
+        $('#banner').val(banner);
+      });
+
     });
   </script>
 
@@ -57,14 +64,13 @@
   </div>
 
   <br>
-
-  <div id="image">
-    <p>What's your favorite music genre?</p>
-    <select id="themes" onChange="changeTheme()">
-      <option value="images/bg/default.png">Default</option>
-      <option value="images/bg/ikon.jpg">Hip Hop</option>
-    </select>
-  </div>
+<div id="image">
+<p>What's your favorite music genre?</p>
+    <select name="change" id="backgrounds">
+<option value="images/ikon.jpg">Pop</option>
+<option value="images/ikon.jpg">Hip Hop</option>
+</select>
+</div>
 
 </body>
 
