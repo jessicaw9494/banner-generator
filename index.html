@@ -11,7 +11,7 @@
       $('#namebutton').click(function() {
         var name = $('#name').val();
         var name = $('input').val();
-        $('h1').html(name + "'s " + "KPOP BANNER");
+        $('h1').html(name + "'s " + "KAWAII BANNER");
       });
 
       $("#colorbutton").click(function() {
@@ -19,11 +19,25 @@
         $('body').css('background-color', favColor);
         $('#banner').val(favColor);
       });
-      
-$("#imagebutton").click(function() {
-        var change = $('#backgrounds').val();
-       $("image").css("background","url(images/image.jpg)");
-        $('#backgrounds').val();
+
+      $("#imagebutton").click(function() {
+        var images = $('#backgrounds').val();
+        var images = $('select').val();
+        $("div").css("backgrounds", "url(images/image.jpg)");
+      });
+
+      $('#namebutton').click(function() {
+        $('h1').css('color', '#F9FBB2');
+        $('h1').css('font-size', '50px');
+        $('#pname').css('color', '#7C6354');
+      });
+
+      $('#colorbutton').click(function() {
+        $('#pbanner').css('color', '#7C6354');
+      });
+
+      $('#imagebutton').click(function() {
+        $('#pimage').css('color', '#7C6354');
       });
     });
   </script>
@@ -37,18 +51,15 @@ $("#imagebutton").click(function() {
     p {
       font-family: Impact;
     }
-    /*#banner {
-      display: none;
-    }
   </style>
 
 </head>
 
 <body>
-  <h1>KPOP BANNER</h1>
+  <h1>KAWAII BANNER</h1>
 
   <div id="name">
-    <p>What's your name?</p>
+    <p id="pname">What's your name?</p>
     <input id='name'>
     <button id="namebutton">enter</button>
   </div>
@@ -56,20 +67,21 @@ $("#imagebutton").click(function() {
   <br>
 
   <div id="banner">
-    <p>What's your favorite color?</p>
+    <p id="pbanner">What's your favorite color?</p>
     <input id="favColor">
     <button id="colorbutton">enter</button>
   </div>
 
   <br>
-<div id="image">
-<p>What's your favorite music genre?</p>
+  <div id="image">
+    <p id="pimage">What's your favorite music genre?</p>
     <select name="change" id="backgrounds">
-<option value="images/ikon.jpg">Pop</option>
-<option value="images/ikon.jpg">Hip Hop</option>
-</select>
-<button id="imagebutton">enter</button>
-</div>
+      <option value="images/ikon2.jpg">Pop</option>
+      <option value="images/ikon2.jpg">Hip Hop</option>
+    </select>
+    <button id="imagebutton">enter</button>
+  </div>
+
 
 </body>
 
