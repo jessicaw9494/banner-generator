@@ -8,35 +8,35 @@
   <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
   <script>
     $(function() {
-      $('#namebutton').click(function() {
-        var name = $('#name').val();
-        var name = $('input').val();
-        $('h1').html(name + "'s " + "KAWAII BANNER");
+      $('#namebutton').click(function() {  //when click the button for name
+        var name = $('#name').val();  //calling name id
+        var name = $('input').val();  //calling name input
+        $('h1').html(name + "'s " + "KAWAII BANNER");  //makes the h1 line into user input and h1
       });
 
-      $("#colorbutton").click(function() {
-        var favColor = $('#favColor').val();
-        $('body').css('background-color', favColor);
-        $('#banner').val(favColor);
+      $("#colorbutton").click(function() {  //when click button for name
+        var favColor = $('#favColor').val();  //calling favColor id
+        $('body').css('background-color', favColor);  //changes goes to bg color
+        $('#banner').val(favColor);  //changes color to question's input
       });
 
-      $("#imagebutton").click(function() {
-        var images = $('#backgrounds').val();
-        var images = $('select').val();
-        $("div").css("backgrounds", "url(images/image.jpg)");
+      $("#imagebutton").click(function() {  //when click image button 
+        var images = $('#backgrounds').val();  //image to bg
+        var images = $('select').val();  //selected question = to value
+        $("div").css("backgrounds", "url(images/image.jpg)"); //css bg to selected image
       });
 
-      $('#namebutton').click(function() {
-        $('h1').css('color', '#F9FBB2');
-        $('h1').css('font-size', '50px');
-        $('#pname').css('color', '#7C6354');
+      $('#namebutton').click(function() { //when name button clicked
+        $('h1').css('color', '#F9FBB2'); //h1 tag to color change
+        $('h1').css('font-size', '50px');  //h1 tag to font size change
+        $('#pname').css('color', '#7C6354');  //p tag to change color
       });
 
-      $('#colorbutton').click(function() {
+      $('#colorbutton').click(function() { //color button changes p tag color
         $('#pbanner').css('color', '#7C6354');
       });
 
-      $('#imagebutton').click(function() {
+      $('#imagebutton').click(function() {  //image button changes p tag color
         $('#pimage').css('color', '#7C6354');
       });
     });
